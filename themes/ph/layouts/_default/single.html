@@ -1,0 +1,27 @@
+{{ partial "header" . }}
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+<div class="container">
+    {{ partial "head.html" . }}
+
+    {{ with .Resources.GetMatch "*featured*" }}
+    <img src="{{ .RelPermalink }}" alt="{{ .Title }}" class="featured-image" />
+    {{ end }}
+
+    <article>
+                <h1 class="title">{{ .Title }}</h1>
+            {{ if eq .Section "blog" }}
+                <div class="meta">Posted on <strong>{{ dateFormat "Jan 2, 2006" .Date }}</strong>
+                under {{ range .Params.tags }}
+                <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="sectiontags">{{ . }}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+
+    <div class="markdown">
+        {{ .Content }}
+    </div>
+    </article>
+
+</div>
+{{ partial "footer" . }}

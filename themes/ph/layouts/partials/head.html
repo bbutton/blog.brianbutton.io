@@ -1,0 +1,27 @@
+<div class="container">
+
+    <header id="header">
+    <h1>{{ .Site.Params.Title }}</h1>
+    <h2>{{ .Site.Params.Subtitle }}</h2>
+</header>
+<nav class="nav">
+    <label for="show-menu" class="show-menu"><i class="fa fa-bars"></i> MENU</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="flat" id="menu">
+            {{ $currentPage := newScratch }}
+            {{  if eq .Type "page" }}
+            {{  $currentPage.Set "pagemenu" (.Name | upper) }}
+            {{  else }}
+            {{  $currentPage.Set "pagemenu" (.Section | upper) }}
+            {{  end }}
+                    
+        {{ range .Site.Menus.main }}
+        <li class="nav-text {{ if eq ($currentPage.Get "pagemenu") .Name }}current{{ end }}">
+            <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+        {{ range sort .Site.Menus.icon }}
+        <li class="nav-icon"><a href="{{ .URL }}" target="_blank"><i class="fa fa-{{ .Name }}"></i></a></li>
+        {{ end }}
+    </ul>
+</nav>

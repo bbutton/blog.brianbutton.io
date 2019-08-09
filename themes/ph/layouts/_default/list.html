@@ -1,0 +1,38 @@
+{{ partial "header" . }}
+
+<div class="container">
+  {{ partial "head" . }}
+
+  {{ if isset .Data "Term" }}
+  <h1 class="page-title">Blog posts tagged - "{{.Data.Term}}"</h1>
+{{ else }}
+  <h1 class="page-title">Blog Posts</h1>
+{{ end }}
+
+{{- range .Data.Pages -}}
+{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
+{{- else -}}
+
+<article>
+    <h2 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+{{ if eq .Section "blog" }}
+    <div class="meta">Posted on <strong>{{ dateFormat "Jan 2, 2006" .Date }}</strong>
+    under {{ range .Params.tags }}
+    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="sectiontags">{{ . }}</a>
+    {{ end }}
+</div>
+{{ end }}
+
+<div class="markdown">
+{{ .Summary }}
+</div>
+<div><a href="{{ .RelPermalink }}">Continue reading --></a></div>
+</article>
+
+{{- end -}}
+{{- end -}}
+
+
+</div>
+
+{{ partial "footer" . }}

@@ -1,0 +1,10 @@
+{{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}" /> {{ end }}
+<main class="homepage">
+      <div class="hero">
+        <h1>{{ .Site.Params.homepageheading }}</h1>
+        <h2>{{ markdownify .Site.Params.Description }}</h2>
+    </div>
+  </main>
+
+
+ 

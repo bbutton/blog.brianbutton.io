@@ -1,0 +1,72 @@
+baseURL = "https://testblog.brianbutton.io"
+languageCode = "en-us"
+title = "Brian's Agile Musings"
+theme = "ph"
+
+disableKinds = ["taxonomies", "taxonomyTerm"]
+enableRobotsTXT = "true"
+
+[params]
+	# Blog subtitle which appears below blog title. Supports markdown.
+	title = "Brian's Agile Musings"
+    subtitle = "agile | software | cloud"
+    homepageheading = "Passionate Developer and Agilist"
+    description = "Historical and new blog content from Brian Button, veteran of the software and agile worlds."
+    profilepic = "/siteimg/StLouisStorm.png"
+    rss_feed_url = "https://testblog.brianbutton.io/content/index.xml"
+
+# Main menu which appears below site header.
+[[menu.main]]
+name = "HOME"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "BLOG"
+url = "/content"
+weight = 2
+
+[[menu.main]]
+name = "SPEAKING"
+url = "/speaking"
+weight = 3
+
+[[menu.main]]
+name = "CONTACT ME"
+url = "/contact-me"
+weight = 4
+
+[[menu.main]]
+name = "SUBSCRIBE"
+url = "/content/index.xml"
+weight = 5
+
+# [[menu.main]]
+# name = "Tags"
+# url = "/tags"
+# weight = 4
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "https://twitter.com/brianbuttonxp"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://linkedin.com/in/brianbutton"
+    name = "linkedin"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://github.com/bbutton"
+    name = "github"
+    weight = 5
+
+[[menu.icon]]
+    url = "https://open.spotify.com/user/brianbuttonxp"
+    name = "spotify"
+    weight = 6
+
