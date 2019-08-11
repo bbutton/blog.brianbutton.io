@@ -3,7 +3,7 @@
 FORCE=0
 PUBLISH_NEEDED=0
 
-if [ ( "$1" == "--force" -a $# -eq 3 ) -o $# -ne 2 ]; then 
+if  test "$1" == "--force" -a $# -ne 3 || test $# -ne 2; then
 	echo "usage: $0 [--force] <contentDir> <destinationDir>" >&2
 	exit 1
 fi
