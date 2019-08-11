@@ -9,7 +9,7 @@ git remote -v update 2>&1 | grep "up to date" | grep -q master
 if [ $? -ne 0 ]; then
 	echo "Changed detexted, updating blog source before publishing"
 	git pull
-	hugo --verbose --verboseLog --contentDir $1 --destination $22 --cleanDestinationDir --minify --templateMetrics --templateMetricsHints
+	hugo --verbose --verboseLog --contentDir $1 --destination $2 --cleanDestinationDir --minify --templateMetrics --templateMetricsHints
 else
 	echo "No changes detected, blog not updated"
 fi
