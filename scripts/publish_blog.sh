@@ -3,7 +3,7 @@
 FORCE=0
 PUBLISH_NEEDED=0
 
-if [ $# -lt 2 -o $# -gt 3 ]
+if [ $# -lt 2 -o $# -gt 3 ]; then
 	echo "usage: $0 [--force] <contentDir> <destinationDir>" >&2
 	exit 1
 fi
