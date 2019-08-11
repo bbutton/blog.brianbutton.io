@@ -3,10 +3,19 @@
 FORCE=0
 PUBLISH_NEEDED=0
 
-if  test "$1" == "--force" -a $# -ne 3 || test $# -ne 2; then
-	echo "usage: $0 [--force] <contentDir> <destinationDir>" >&2
-	exit 1
+if test "$1" == "--force"; then
+	if [ $# -ne 3 ]; then 
+		echo "usage: $0 [--force] <contentDir> <destinationDir>" >&2
+		exit 1
+	fi
+else
+	if [ $# -ne 2 ]; then
+		echo "usage: $0 [--force] <contentDir> <destinationDir>" >&2
+		exit 1
+	fi
 fi
+		
+exit 0
 
 if [ "$1" == "--force" ]; then 
 	FORCE=1
