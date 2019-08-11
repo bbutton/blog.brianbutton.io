@@ -15,8 +15,6 @@ else
 	fi
 fi
 		
-exit 0
-
 if [ "$1" == "--force" ]; then 
 	FORCE=1
 	PUBLISH_NEEDED=1
