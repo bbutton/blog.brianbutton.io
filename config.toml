@@ -27,19 +27,9 @@ url = "/content"
 weight = 2
 
 [[menu.main]]
-name = "SPEAKING"
-url = "/speaking"
-weight = 3
-
-[[menu.main]]
-name = "CONTACT ME"
-url = "/contact-me"
-weight = 4
-
-[[menu.main]]
 name = "SUBSCRIBE"
 url = "/content/index.xml"
-weight = 5
+weight = 3
 
 # [[menu.main]]
 # name = "Tags"
