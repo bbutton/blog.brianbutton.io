@@ -1,4 +1,4 @@
-baseURL = "https://testblog.brianbutton.io"
+baseURL = "https://blog.brianbutton.io"
 languageCode = "en-us"
 title = "Brian's Agile Musings"
 theme = "ph"
@@ -13,7 +13,7 @@ enableRobotsTXT = "true"
     homepageheading = "Passionate Developer and Agilist"
     description = "Historical and new blog content from Brian Button, veteran of the software and agile worlds."
     profilepic = "/siteimg/StLouisStorm.png"
-    rss_feed_url = "https://testblog.brianbutton.io/content/index.xml"
+    rss_feed_url = "https://blog.brianbutton.io/content/index.xml"
 
 # Main menu which appears below site header.
 [[menu.main]]
